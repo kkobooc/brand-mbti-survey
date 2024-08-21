@@ -24,14 +24,14 @@ h1 {
 }
 
 .question {
-    margin-bottom: 30px;
+    margin-bottom: 15px; /* 질문 사이 간격 줄임 */
 }
 
 label {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #666;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px; /* 라벨과 라디오 버튼 사이 간격 줄임 */
     font-weight: 400;
 }
 
@@ -39,26 +39,27 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 0; /* 전체적인 위아래 패딩 줄임 */
 }
 
 .option-item {
     text-align: center;
     flex: 1;
     position: relative;
+    margin: 0 5px; /* 라디오 버튼 간 간격 조정 */
 }
 
 .option-item span {
     display: block;
     font-size: 0.9em;
     color: #888;
-    margin-bottom: 8px;
+    margin-bottom: 4px; /* 텍스트와 라디오 버튼 사이 간격 줄임 */
 }
 
 .option-item input[type="radio"] {
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 18px; /* 라디오 버튼 크기 줄임 */
+    height: 18px;
     background-color: #ddd;
     border-radius: 50%;
     border: 2px solid #ccc;
@@ -66,6 +67,7 @@ label {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    top: 2px; /* 텍스트와 일렬로 맞추기 위해 살짝 위로 이동 */
 }
 
 .option-item input[type="radio"]:checked {
@@ -76,8 +78,8 @@ label {
 .option-item input[type="radio"]:checked::after {
     content: '';
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 10px; /* 내부 체크 표시 크기 조정 */
+    height: 10px;
     background-color: white;
     border-radius: 50%;
     position: absolute;
@@ -101,7 +103,7 @@ label {
     border-radius: 8px;
     font-size: 1.2em;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 20px; /* 버튼 위의 간격 조정 */
     transition: background-color 0.3s ease;
 }
 
