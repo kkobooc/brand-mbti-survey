@@ -29,8 +29,20 @@ label {
     color: #555;
 }
 
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options label {
+    font-size: 0.9em;
+    color: #666;
+}
+
 input[type="radio"] {
     margin: 0 10px;
+    accent-color: #007BFF;
 }
 
 .submit-button {
@@ -43,6 +55,7 @@ input[type="radio"] {
     border-radius: 4px;
     font-size: 1.2em;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .submit-button:hover {

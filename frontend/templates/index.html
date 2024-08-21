@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +12,28 @@
         <form action="/submit/" method="post">
             {% for i in range(1, 8) %}
                 <div class="question">
-                    <label for="answer{{ i }}">Question {{ i }}:</label><br>
-                    <span>매우 그렇지 않음</span>
-                    <input type="radio" id="answer{{ i }}" name="answer{{ i }}" value="1" required>
-                    <input type="radio" id="answer{{ i }}" name="answer{{ i }}" value="2" required>
-                    <input type="radio" id="answer{{ i }}" name="answer{{ i }}" value="3" required>
-                    <span>보통</span>
-                    <input type="radio" id="answer{{ i }}" name="answer{{ i }}" value="4" required>
-                    <input type="radio" id="answer{{ i }}" name="answer{{ i }}" value="5" required>
-                    <input type="radio" id="answer{{ i }}" name="answer{{ i }}" value="6" required>
-                    <span>매우 그렇다</span>
-                    <input type="radio" id="answer{{ i }}" name="answer{{ i }}" value="7" required>
+                    <label>Question {{ i }}:</label>
+                    <div class="options">
+                        <label for="answer{{ i }}_1">그렇지 않다</label>
+                        <input type="radio" id="answer{{ i }}_1" name="answer{{ i }}" value="1" required>
+                        <input type="radio" id="answer{{ i }}_2" name="answer{{ i }}" value="2" required>
+                        <input type="radio" id="answer{{ i }}_3" name="answer{{ i }}" value="3" required>
+                        <label for="answer{{ i }}_4">보통</label>
+                        <input type="radio" id="answer{{ i }}_4" name="answer{{ i }}" value="4" required>
+                        <input type="radio" id="answer{{ i }}_5" name="answer{{ i }}" value="5" required>
+                        <input type="radio" id="answer{{ i }}_6" name="answer{{ i }}" value="6" required>
+                        <label for="answer{{ i }}_7">그렇다</label>
+                        <input type="radio" id="answer{{ i }}_7" name="answer{{ i }}" value="7" required>
+                    </div>
                 </div>
                 <br>
             {% endfor %}
             <input type="submit" value="Submit" class="submit-button">
         </form>
 
-        <!-- 점수를 표시하는 부분 -->
         {% if total_score %}
             <h2>Your total score is: {{ total_score }}</h2>
         {% endif %}
-
     </div>
 </body>
 </html>
