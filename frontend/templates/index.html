@@ -14,16 +14,34 @@
                 <div class="question">
                     <label>Question {{ i }}:</label>
                     <div class="options">
-                        <label for="answer{{ i }}_1">그렇지 않다</label>
-                        <input type="radio" id="answer{{ i }}_1" name="answer{{ i }}" value="1" required>
-                        <input type="radio" id="answer{{ i }}_2" name="answer{{ i }}" value="2" required>
-                        <input type="radio" id="answer{{ i }}_3" name="answer{{ i }}" value="3" required>
-                        <label for="answer{{ i }}_4">보통</label>
-                        <input type="radio" id="answer{{ i }}_4" name="answer{{ i }}" value="4" required>
-                        <input type="radio" id="answer{{ i }}_5" name="answer{{ i }}" value="5" required>
-                        <input type="radio" id="answer{{ i }}_6" name="answer{{ i }}" value="6" required>
-                        <label for="answer{{ i }}_7">그렇다</label>
-                        <input type="radio" id="answer{{ i }}_7" name="answer{{ i }}" value="7" required>
+                        <div class="option-item">
+                            <span>그렇지 않다</span>
+                            <input type="radio" id="answer{{ i }}_1" name="answer{{ i }}" value="1" required>
+                        </div>
+                        <div class="option-item">
+                            <span></span>
+                            <input type="radio" id="answer{{ i }}_2" name="answer{{ i }}" value="2" required>
+                        </div>
+                        <div class="option-item">
+                            <span></span>
+                            <input type="radio" id="answer{{ i }}_3" name="answer{{ i }}" value="3" required>
+                        </div>
+                        <div class="option-item">
+                            <span>보통</span>
+                            <input type="radio" id="answer{{ i }}_4" name="answer{{ i }}" value="4" required>
+                        </div>
+                        <div class="option-item">
+                            <span></span>
+                            <input type="radio" id="answer{{ i }}_5" name="answer{{ i }}" value="5" required>
+                        </div>
+                        <div class="option-item">
+                            <span></span>
+                            <input type="radio" id="answer{{ i }}_6" name="answer{{ i }}" value="6" required>
+                        </div>
+                        <div class="option-item">
+                            <span>그렇다</span>
+                            <input type="radio" id="answer{{ i }}_7" name="answer{{ i }}" value="7" required>
+                        </div>
                     </div>
                 </div>
                 <br>
