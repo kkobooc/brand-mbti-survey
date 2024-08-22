@@ -11,6 +11,17 @@ app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
 # Jinja2 템플릿 설정
 templates = Jinja2Templates(directory="frontend/templates")
 
+# 질문 리스트
+questions = [
+    "변화, 개선",
+    "애정, 아름다움, 행복, 따스함",
+    "행동, 도움, 행위, 움직임",
+    "성찰, 탐색, 탐구, 탐험",
+    "1인칭, 나 자신, 나에 대한, 내면, 성찰, 스스로",
+    "너와 나, 우리, 교류, 교감, 균형",
+    "극대화, 최대화, 확산, 모든 이들을 위한, 확대, 확산"
+]
+
 @app.get("/", response_class=HTMLResponse)
 async def read_index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})

@@ -12,35 +12,36 @@
         <form action="/submit/" method="post">
             {% for i in range(1, 8) %}
                 <div class="question">
-                    <label>Question {{ i }}:</label>
+                    <label>다음의 단어 및 속성과 얼마나 가까운지 선택해주세요.</label> <!-- 질문 텍스트 출력 -->
+                    <label>{{ questions[i-1] }}</label>
                     <div class="options">
                         <div class="option-item">
-                            <span>그렇지 않다</span>
-                            <input type="radio" id="answer{{ i }}_1" name="answer{{ i }}" value="1" required>
+                            <span>매우 비공감</span>
+                            <input type="radio" name="answer{{ i }}" value="1" required>
                         </div>
                         <div class="option-item">
                             <span></span>
-                            <input type="radio" id="answer{{ i }}_2" name="answer{{ i }}" value="2" required>
+                            <input type="radio" name="answer{{ i }}" value="2" required>
                         </div>
                         <div class="option-item">
                             <span></span>
-                            <input type="radio" id="answer{{ i }}_3" name="answer{{ i }}" value="3" required>
+                            <input type="radio" name="answer{{ i }}" value="3" required>
                         </div>
                         <div class="option-item">
                             <span>보통</span>
-                            <input type="radio" id="answer{{ i }}_4" name="answer{{ i }}" value="4" required>
+                            <input type="radio" name="answer{{ i }}" value="4" required>
                         </div>
                         <div class="option-item">
                             <span></span>
-                            <input type="radio" id="answer{{ i }}_5" name="answer{{ i }}" value="5" required>
+                            <input type="radio" name="answer{{ i }}" value="5" required>
                         </div>
                         <div class="option-item">
                             <span></span>
-                            <input type="radio" id="answer{{ i }}_6" name="answer{{ i }}" value="6" required>
+                            <input type="radio" name="answer{{ i }}" value="6" required>
                         </div>
                         <div class="option-item">
-                            <span>그렇다</span>
-                            <input type="radio" id="answer{{ i }}_7" name="answer{{ i }}" value="7" required>
+                            <span>매우 공감</span>
+                            <input type="radio" name="answer{{ i }}" value="7" required>
                         </div>
                     </div>
                 </div>
