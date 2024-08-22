@@ -13,18 +13,18 @@ templates = Jinja2Templates(directory="frontend/templates")
 
 # 질문 리스트
 questions = [
-    "변화, 개선",
-    "애정, 아름다움, 행복, 따스함",
-    "행동, 도움, 행위, 움직임",
-    "성찰, 탐색, 탐구, 탐험",
-    "1인칭, 나 자신, 나에 대한, 내면, 성찰, 스스로",
-    "너와 나, 우리, 교류, 교감, 균형",
-    "극대화, 최대화, 확산, 모든 이들을 위한, 확대, 확산"
+    "당신은 새로운 경험을 즐깁니까?",
+    "스트레스를 쉽게 받습니까?",
+    "팀워크를 중요하게 생각합니까?",
+    "대화를 통해 문제를 해결하려 합니까?",
+    "다른 사람의 감정을 잘 이해합니까?",
+    "계획을 세우고 이를 따르는 편입니까?",
+    "리더십 역할을 맡는 것을 좋아합니까?"
 ]
 
 @app.get("/", response_class=HTMLResponse)
 async def read_index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request, "questions": questions})
 
 @app.post("/submit/", response_class=HTMLResponse)
 async def submit_survey(
@@ -38,4 +38,4 @@ async def submit_survey(
     answer7: int = Form(...)
 ):
     total_score = sum([answer1, answer2, answer3, answer4, answer5, answer6, answer7])
-    return templates.TemplateResponse("index.html", {"request": request, "total_score": total_score})
+    return templates.TemplateResponse("index.html", {"request": request, "total_score": total_score, "questions": questions})
