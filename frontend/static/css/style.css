@@ -18,13 +18,21 @@ body {
 h1 {
     text-align: center;
     color: #333;
-    font-size: 2.5em;
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 1.3em;
     font-weight: 300;
     margin-bottom: 20px;
 }
 
 .question {
-    margin-bottom: 15px; /* 질문 사이 간격 줄임 */
+    margin-bottom: 40px; /* 질문 사이 간격 줄임 */
 }
 
 label {
