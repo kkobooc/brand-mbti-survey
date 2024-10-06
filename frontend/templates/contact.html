@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>설문 결과를 확인해 보세요!</h1>
+        <form action="/contact" method="post">
+            <input type="hidden" name="response_1" value="{{ response_1 }}">
+            <input type="hidden" name="response_2" value="{{ response_2 }}">
+            <input type="hidden" name="response_3" value="{{ response_3 }}">
+            <input type="hidden" name="response_4" value="{{ response_4 }}">
+            <input type="hidden" name="response_5" value="{{ response_5 }}">
+            <input type="hidden" name="response_6" value="{{ response_6 }}">
+            <input type="hidden" name="response_7" value="{{ response_7 }}">
+            <!-- 전화번호 입력 -->
+            <label for="phone">전화번호</label>
+            <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required>
+
+            <!-- 이메일 입력 -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+
+            <!-- 정보 수집 동의 -->
+            <div class="consent-box">
+                <p>내 브랜드 MBTI 결과를 확인시려면,<br>개인정보 수집 및 이용에 동의해 주세요.</p>
+                <ul>
+                    <li><strong>수집 목적:</strong> 브랜드 MBTI 설문 결과 발송용</li>
+                    <li><strong>수집 항목:</strong> 전화번호, 이메일</li>
+                    <li><strong>보유 및 이용 기간:</strong> 입력일로부터 1년까지</li>
+                </ul>
+                <hr>
+                <div class="checkbox-group">
+                    <input type="radio" id="agree" name="consent" value="agree" required>
+                    <label for="agree">네, 동의합니다.</label>
+                </div>
+            </div>
+
+            <!-- 제출 버튼 -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

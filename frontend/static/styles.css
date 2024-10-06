@@ -1,0 +1,184 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #0056b3, #003d82);
+    color: #ffffff;  /* 기본 텍스트 색상을 흰색으로 설정 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 50px;
+    width: 450px;
+    color: #333;  /* 컨테이너 내부 텍스트 색상은 어두운 색으로 설정 */
+}
+
+/* 제목 스타일 */
+h1 {
+    color: #003d82;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+/* 본문 텍스트 스타일 */
+p, label {
+    color: #333; /* 라벨과 텍스트의 색상을 어두운 색으로 설정 */
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* 질문과 라디오 버튼 간의 간격 */
+label {
+    display: block;
+    margin-bottom: 30px;  /* 질문과 라디오 버튼 사이의 여백 */
+}
+
+/* 설명 텍스트 스타일 */
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.scale-labels span {
+    font-size: 14px;
+    color: #666; /* 좀 더 세련된 중간 밝기의 색상 */
+}
+
+/* 라디오 버튼 그룹 스타일 */
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.radio-group label {
+    text-align: center; /* 숫자와 라디오 버튼이 중앙에 오도록 */
+    font-size: 14px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;  /* 숫자와 라디오 버튼 간격 */
+    vertical-align: middle;
+}
+
+/* 입력 필드 스타일 */
+input[type="text"], input[type="tel"], input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px; /* 입력 필드 간격 추가 */
+}
+
+/* 버튼 스타일 */
+.start-button, button {
+    background-color: #003d82;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover, button:hover {
+    background-color: #002b66;
+}
+
+/* 기본 컨테이너 및 폼 요소 스타일 */
+/* .container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 50px;
+    width: 450px;
+    color: #333;
+} */
+
+/* 개인정보 수집 및 동의 체크박스 스타일 */
+.consent-box {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.consent-box p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.consent-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.consent-box li {
+    margin-bottom: 10px;
+}
+
+.consent-box strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;  /* 라디오 버튼과 텍스트를 수평 정렬 */
+    margin-bottom: 10px;
+}
+
+/* 라디오 버튼 스타일 */
+.checkbox-group input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;  /* 라디오 버튼을 텍스트와 수평 맞춤 */
+}
+
+/* 라벨 텍스트 스타일 */
+.checkbox-group label {
+    font-size: 14px;  /* 글자 크기 */
+    color: #333;      /* 텍스트 색상 */
+}
+
+/* 구분선 */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+
+/* 푸터 스타일 */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #003d82;
+    text-decoration: underline;
+}

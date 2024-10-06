@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>1인칭, 나 자신, 나에 대한,<br>내면, 성찰, 스스로</h1>
+        <form action="/question_5" method="post">
+            <input type="hidden" name="response_1" value="{{ response_1 }}">
+            <input type="hidden" name="response_2" value="{{ response_2 }}">
+            <input type="hidden" name="response_3" value="{{ response_3 }}">
+            <input type="hidden" name="response_4" value="{{ response_4 }}">
+            <label for="response_5">위 단어의 속성과 얼마나 브랜드가 가까운지 선택해주세요.</label>
+            <!-- 설명 추가 -->
+            <div class="scale-labels">
+                <span>매우 비공감</span>
+                <span>보통</span>
+                <span>매우 공감</span>
+            </div>
+            
+            <!-- 라디오 버튼 그룹 -->
+            <div class="radio-group">
+                <label><input type="radio" name="response_5" value="1" required> 1</label>
+                <label><input type="radio" name="response_5" value="2"> 2</label>
+                <label><input type="radio" name="response_5" value="3"> 3</label>
+                <label><input type="radio" name="response_5" value="4"> 4</label>
+                <label><input type="radio" name="response_5" value="5"> 5</label>
+                <label><input type="radio" name="response_5" value="6"> 6</label>
+                <label><input type="radio" name="response_5" value="7"> 7</label>
+            </div>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>
